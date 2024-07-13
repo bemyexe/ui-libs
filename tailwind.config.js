@@ -24,7 +24,16 @@ export default {
     },
     darkMode: 'selector',
 
-    extend: {},
+    extend: {
+      colors() {
+        return {
+          primary: {
+            DEFAULT: 'hsl(263, 55%, 52%)',
+            dark: 'hsl(217, 19%, 35%)',
+          },
+        };
+      },
+    },
   },
   plugins: [],
   preflight: {
