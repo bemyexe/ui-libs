@@ -5,7 +5,7 @@ Here, I practically test various UI libraries to explore their capabilities and 
 
 ### Project
 
-- [https://ui-libs-in-touch.netlify.app](https://mindbox-test-task-react.netlify.app)
+- [https://ui-libs-in-touch.netlify.app](https://ui-libs-in-touch.netlify.app/)
 
 ### Stack
 - Tailwind
