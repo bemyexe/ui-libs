@@ -4,7 +4,7 @@ import { Header } from './components/header';
 
 export const Root = () => {
   return (
-    <div className="bg-sky-200">
+    <div>
       <Header />
       <Outlet />
     </div>
