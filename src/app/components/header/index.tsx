@@ -1,24 +1,32 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-import { ROUTER_PATH } from '../../../router/router';
+import { cn } from '../../../helpers/classNames';
 
+const EXAMPLES = [
+  { name: 'tailwind', href: '/tailwind' },
+  { name: 'mui', href: '/mui' },
+  { name: 'antd', href: '/antd' },
+  { name: 'resizable', href: '/resizable' },
+];
 export const Header = () => {
+  const location = useLocation();
+  console.log(location.pathname);
   return (
     <header className="header flex justify-center items-end  text-white font-semibold">
       <nav>
         <ul className="flex gap-3">
-          <Link to={ROUTER_PATH.tailwind}>
-            <li className="nav">TAILWIND </li>
-          </Link>
-          <Link to={ROUTER_PATH.mui}>
-            <li className="nav">MAERIAL UI</li>
-          </Link>
-          <Link to={ROUTER_PATH.antd}>
-            <li className="nav">ANT DESIGN </li>
-          </Link>
-          <Link to={ROUTER_PATH.resizable}>
-            <li className="nav">RESIZABLE</li>
-          </Link>
+          {EXAMPLES.map((example) => (
+            <Link to={example.href} key={example.href}>
+              <li
+                className={cn(
+                  'nav',
+                  location.pathname.startsWith(example.href) && 'bg-primary'
+                )}
+              >
+                {example.name}
+              </li>
+            </Link>
+          ))}
         </ul>
       </nav>
     </header>
