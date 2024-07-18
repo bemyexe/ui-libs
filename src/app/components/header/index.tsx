@@ -16,6 +16,9 @@ export const Header = () => {
           <Link to={ROUTER_PATH.antd}>
             <li className="nav">ANT DESIGN </li>
           </Link>
+          <Link to={ROUTER_PATH.resizable}>
+            <li className="nav">RESIZABLE</li>
+          </Link>
         </ul>
       </nav>
     </header>
